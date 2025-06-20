@@ -1,7 +1,7 @@
 import json
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import Optional, Dict
+from typing import Optional, Dict, Any  # Updated import
 import httpx
 import uvicorn
 
@@ -24,7 +24,7 @@ TIMEOUT = 30
 class GenerateRequest(BaseModel):
     text: str
     mode: Optional[str] = None
-    settings: Optional[Dict[str, any]] = None
+    settings: Optional[Dict[str, Any]] = None  # Fixed type hint
 
 @app.post("/generate")
 async def generate(request: GenerateRequest):
