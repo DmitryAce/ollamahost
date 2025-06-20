@@ -1,0 +1,21 @@
+{
+    "modes": {
+        "concise": {
+            "max_length": 50,
+            "temperature": 0.7
+        },
+        "detailed": {
+            "max_length": 200,
+            "temperature": 0.9
+        },
+        "creative": {
+            "max_length": 150,
+            "temperature": 1.0,
+            "top_p": 0.9
+        }
+    },
+    "default": {
+        "max_length": 100,
+        "temperature": 0.8
+    }
+}
